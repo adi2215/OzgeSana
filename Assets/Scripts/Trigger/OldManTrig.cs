@@ -41,6 +41,6 @@ public class OldManTrig : MonoBehaviour
             contextOff.Raise();
             playerInRange = false;
         }
-            
+
     }
 }

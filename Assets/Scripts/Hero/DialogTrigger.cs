@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class DialogTrigger : MonoBehaviour
 {
     public Message[] messages;
     public Actor[] actors;
-    public DialogManager Box;
+    public DialogueRunner Runner;
 
     public SaveDialog countDialog;
 
     public void StartDialog()
     {
-        Box.OpenDialogue(messages, actors);
+        Runner.StartDialogue("OldManStart");
     }
 }
 

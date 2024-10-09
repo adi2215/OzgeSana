@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
+
 
 public class OldManTrig : MonoBehaviour
 {
@@ -10,17 +12,18 @@ public class OldManTrig : MonoBehaviour
 
     public bool playerInRange;
 
-    public DialogTrigger trigger;
-
     public bool currentPlayer = true;
 
     public GameObject contextClue;
+
+    public DialogueRunner runner;
+
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && playerInRange && !DialogManager.isActive)
         {
-            trigger.StartDialog();
+            runner.StartDialogue("OldManStart");
             contextClue.SetActive(false);
         }
     }

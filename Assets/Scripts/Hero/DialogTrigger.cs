@@ -7,14 +7,6 @@ public class DialogTrigger : MonoBehaviour
 {
     public Message[] messages;
     public Actor[] actors;
-    public DialogueRunner Runner;
-
-    public SaveDialog countDialog;
-
-    public void StartDialog()
-    {
-        Runner.StartDialogue("OldManStart");
-    }
 }
 
 [System.Serializable]

@@ -14,24 +14,25 @@ public class OldManTrig : MonoBehaviour
 
     public bool currentPlayer = true;
 
-    public GameObject contextClue;
+    public ContextClue clue;
 
     public DialogueRunner runner;
 
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerInRange && !DialogManager.isActive)
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange)
         {
+            clue.Disable();
             runner.StartDialogue("OldManStart");
-            contextClue.SetActive(false);
         }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && !DialogManager.isActive)
+        if (other.gameObject.tag == "Player")
         {
+            clue = other.gameObject.GetComponent<ContextClue>();
             contextOn.Raise();
             playerInRange = true;
         }

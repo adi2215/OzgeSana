@@ -106,9 +106,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  Page: {fileID: 0}
   movementInput: {x: 0, y: 0}
   movementSpeed: 0
   Trigger_Stay: {fileID: 0}
+  BoxTab: {fileID: 0}
+  Logo: {fileID: 0}
+  mg: {fileID: 0}
 --- !u!70 &287829113118066776
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

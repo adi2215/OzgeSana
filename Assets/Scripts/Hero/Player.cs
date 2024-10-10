@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     private Animator animator;
 
     public float movementSpeed;
-    public CameraFallow Trigger_Stay;
+    public CameraFollow Trigger_Stay;
     public AnimUiTAB BoxTab;
     public GameObject Logo;
 
